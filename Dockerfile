@@ -35,3 +35,6 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 WORKDIR /usr/dinopedia/app
 
 COPY dinopedia dinopedia
+
+EXPOSE 8000
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

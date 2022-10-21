@@ -8,11 +8,11 @@ services:
     image: dinopedia
     environment:
       APP_DEBUG_MODE: "True"
-      POSTGRES_HOST: db
+      POSTGRES_HOST: django-dino.cmpkpzjgafgz.eu-south-1.rds.amazonaws.com
       POSTGRES_PORT: 5432
-      POSTGRES_DB: dinopedia
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_USER: djangodino
+      POSTGRES_PASSWORD: djangodino1
     entrypoint: ""
     command: "python dinopedia/manage.py runserver 0.0.0.0:8000"
     ports:
@@ -28,7 +28,7 @@ services:
   db:
     image: postgres:14-alpine
     environment:
-      POSTGRES_DB: dinopedia
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: djangodino1
     ports:
       - 5432:5432

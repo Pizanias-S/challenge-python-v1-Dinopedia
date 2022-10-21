@@ -1,0 +1,23 @@
+{% extends "dinosaurs/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    All Dinos
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "dinosaurs/post.css" %}"/>
+    <link rel="stylesheet" href="{% static "dinosaurs/all-posts.css" %}"/>
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+        {% for post in all_posts %}
+            {% include "dinosaurs/includes/post.html" %}
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "dinosaurs/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "dinosaurs/post.css" %}"/>
+    <link rel="stylesheet" href="{% static "dinosaurs/all-posts.css" %}"/>
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+    <h2>Dinos you searched</h2>
+        {% if search_results == "" or request.GET.search_dino|length < 1 %}
+            <h3>This Dino does not exist!</h3>
+        {% else %}
+            <ul>
+            {% for post in search_results %}
+                {% include "dinosaurs/includes/post.html" %}
+            {% endfor %}
+        {% endif %}
+            </ul>
+</section>
+{% endblock %}
