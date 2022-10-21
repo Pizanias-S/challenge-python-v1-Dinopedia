@@ -11,13 +11,21 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+from os import getenv
 
-from dinopedia.config import (
+
+from .config import (
     DATABASE_HOST,
     DATABASE_NAME,
     DATABASE_PASSWORD,
     DATABASE_PORT,
     DATABASE_USER,
+    SECRET_KEY_DINO,
+    # AWS_STORAGE_BUCKET_NAME,
+    # AWS_S3_REGION_NAME,
+    # AWS_ACCESS_KEY_ID,
+    # AWS_SECRET_ACCESS_KEY
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,25 +36,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-aogn%uvt*wpm&llpt%_ryu6$ao&t*%m&id&6b-1ct1qtkzoj3q"
+SECRET_KEY = SECRET_KEY_DINO
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv("IS_DEVELOPMENT", True)
 
 # allow default hosts for both local development and full development in docker-compose
-ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"]
+
+ALLOWED_HOSTS = [
+    getenv("APP_HOST", "localhost"), "0.0.0.0", "127.0.0.1"
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "dinosaurs.apps.DinopollsConfig",
+    #"storages",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "django.contrib.staticfiles"
 ]
 
 MIDDLEWARE = [
@@ -64,7 +76,7 @@ ROOT_URLCONF = "dinopedia.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -129,9 +141,36 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "static/"
-
+STATICFILES_DIRS = [
+    BASE_DIR / "dinosaurs/static"
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+MEDIA_ROOT = BASE_DIR / "uploads"
+MEDIA_URL = "/files/"
+
+# AWS_STORAGE_BUCKET_NAME = AWS_STORAGE_BUCKET_NAME
+# AWS_S3_REGION_NAME = AWS_S3_REGION_NAME
+# AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
+#
+# AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+
+# STATICFILES_FOLDER = "static"
+#
+# MEDIAFILES_FOLDER = "media"
+#
+# STATICFILES_STORAGE = "custom_storages.StaticFileStorage"
+#
+# DEFAULT_FILE_STORAGE = "custom_storages.MediaFileStorage"
+
+# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+
+
+

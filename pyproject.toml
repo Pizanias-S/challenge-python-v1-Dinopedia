@@ -1,15 +1,16 @@
 
 [tool.poetry]
-name = "challenge-python-v1"
+name = "challenge-python-v1-Dinopedia"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Stefanos Pizanias <s.pizanius@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "*"
 psycopg2 = "*"
 pytest = "*"
+
 
 
 [build-system]

@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "dinosaurs/app.css" %}"/>
+    {% block css_files %}
+
+    {% endblock %}
+</head>
+<body>
+    <header id="main-navigation">
+        <h1><a href="{% url "index" %}">Dinopedia</a> </h1>
+        <nav>
+            <a href="{% url "favorites" %}">Favorites</a>
+            <a href="{% url "posts-page" %}">All Dinos</a>
+        </nav>
+        <form action="{% url "search-results" %}" method="get">
+            <label>
+                <input name="search_dino" value="{{request.GET.search_dino}}" type="text" placeholder="Search...">
+            </label>
+        </form>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

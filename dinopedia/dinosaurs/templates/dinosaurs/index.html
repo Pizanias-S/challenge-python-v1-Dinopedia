@@ -1,0 +1,35 @@
+{% extends "dinosaurs/base.html" %}
+{% load static %}
+
+{% block title %}
+    Dinopedia
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "dinosaurs/index.css" %}"/>
+{% endblock %}
+
+{% block content %}
+
+   <section id="welcome">
+        <header>
+            <img src="{% static "dinosaurs/img/unnamed_dino.png" %}" alt="Pizanias - The Author of this blog"/>
+
+        </header>
+        <p>This is the most complete Dinopedia in the world!</p>
+   </section>
+
+    <section id="about">
+        <h3>Dinosaurs</h3>
+        <p>Dinosaurs are a diverse group of reptiles of the clade Dinosauria. They first appeared during the Triassic
+            period, between 243 and 233.23 million years ago (mya), although the exact origin and timing of the
+            evolution of dinosaurs is the subject of active research. They became the dominant terrestrial vertebrates
+            after the Triassic–Jurassic extinction event 201.3 mya; their dominance continued throughout the Jurassic
+            and Cretaceous periods. The fossil record shows that birds are feathered dinosaurs, having evolved from
+            earlier theropods during the Late Jurassic epoch, and are the only dinosaur lineage known to have survived
+            the Cretaceous–Paleogene extinction event approximately 66 mya. Dinosaurs can therefore be divided into
+            avian dinosaurs—birds—and paraphyletic pseudo-extinct non-avian dinosaurs, which are all
+            dinosaurs other than birds.
+        </p>
+    </section>
+{% endblock %}

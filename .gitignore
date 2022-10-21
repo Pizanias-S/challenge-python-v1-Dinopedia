@@ -1,3 +1,7 @@
 .python-version
 __pycache__/
 *.pyc
+/dinopedia/.idea/
+/dinopedia/.venv/
+/dinopedia/custom_storages.py
+

@@ -1,0 +1,17 @@
+{% load static %}
+<li>
+    <article class="post">
+        <a href="{% url "post-detail-page" post.slug %}">
+            {% if post.image1 %}
+                <img src="{{ post.image1.url }}" alt="{{ post.name }}"/>
+            {% else %}
+                <img src="{% static "dinosaurs/img/defaultimg.png" %}" alt="{{ post.name }}"/>
+            {% endif %}
+            <div class="post__content">
+                <h3>{{ post.name }}</h3>
+
+            </div>
+        </a>
+    </article>
+</li>
+
