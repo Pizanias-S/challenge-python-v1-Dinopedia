@@ -8,11 +8,6 @@ The database that was used is PostgreSQL deployed in AWS RDS.
 
 [Click me to see the site!](http://djangodinopediablog-env.eba-umebnduf.eu-south-1.elasticbeanstalk.com/)
 
-### Problems
-I had some issues with Docker and because I have very limited time I was not able to solve them so Docker was not used
-for the project, moreover for the same reasons the testing is not as extensive as it should be.
-
-
 ### Admin
 As an admin you can add a kind of dino with his attributes (Name, Eating Class, Period, 
 Size, Color, Author and up to 2 images for each dino)
