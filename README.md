@@ -14,6 +14,10 @@ for the project, moreover for the same reasons the testing is not as extensive a
 
 
 ### Admin
+As an admin you can add a kind of dino with his attributes (Name, Eating Class, Period, 
+Size, Color, Author and up to 2 images for each dino)
+
+![Dino Admin](dino_admin.jpg)
 
 I created some test dinosaurs feel free to fidle with everything you want.
 
