@@ -4,8 +4,6 @@
 The Dino project first started as a technical assignment for an interview with GWI so base idea of the project came
 from GWI. Everything after the base idea was created by me (except the poetry file).
 
----
-
 ### Deployment
 The application has been deployed in AWS Elastic Beanstalk with the static files been handled from Elastic Beanstalk,
 because unfortunately my free tier account was not able to handle the AWS S3 storage without charging me.
