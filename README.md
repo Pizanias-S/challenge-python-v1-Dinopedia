@@ -19,6 +19,11 @@ Size, Color, Author and up to 2 images for each dino)
 
 ![Dino Admin](dino_admin.jpg)
 
+You have the ability to review, adjust and delete all the existing dinos their attributes
+and the comments made by users.
+
+![Dino Admin 2](dino_admin_2.jpg)
+
 I created some test dinosaurs feel free to fidle with everything you want.
 
 ### Dinopedia
