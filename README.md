@@ -15,9 +15,6 @@ for the project, moreover for the same reasons the testing is not as extensive a
 
 ### Admin
 
-* username: admin
-* password: djangodino1
-
 I created some test dinosaurs feel free to fidle with everything you want.
 
 ### Dinopedia
