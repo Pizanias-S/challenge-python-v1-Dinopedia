@@ -54,6 +54,8 @@ There is a search bar to search for different kinds of dinos.
 
 ### Database Diagram
 
+The Database was created using PostgreSQL
+
 ![Diagram for the dino Database](readme_img/dino_db.jpg)
 
 ### Contact
