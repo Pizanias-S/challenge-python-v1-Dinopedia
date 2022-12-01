@@ -16,7 +16,7 @@ The database that was used is PostgreSQL deployed in AWS RDS.
 As an admin you can add a kind of dino with his attributes (Name, Eating Class, Period, 
 Size, Color, Author and up to 2 images for each dino)
 
-![Dino Admin](dino_admin.jpg)
+![Dino Admin](readme_img/dino_admin.jpg)
 
 You have the ability to review, adjust and delete all the existing dinos their attributes
 and the comments made by users.
