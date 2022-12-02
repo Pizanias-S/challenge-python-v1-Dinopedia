@@ -1,4 +1,4 @@
-# GlobalWebIndex Python Challenge - v1 | Exercise: DinosaursAficionado
+# Python Django Challenge | Exercise: DinosaursAficionado
 
 ### Acknowledgments 
 The Dino project first started as a technical assignment for an interview with GWI so base idea of the project came
