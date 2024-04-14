@@ -8,7 +8,7 @@ from GWI. Everything after the base idea was created by me (except the poetry fi
 The application has been deployed in AWS Elastic Beanstalk with the static files been handled from Elastic Beanstalk,
 because unfortunately my free tier account was not able to handle the AWS S3 storage without charging me.
 
-Unfortunately, I had to take down the blog from AWS because it started charging me.
+Unfortunately, I had to take down the blog from AWS, because it started charging me.
 
 The database that was used is PostgreSQL deployed in AWS RDS. 
 
